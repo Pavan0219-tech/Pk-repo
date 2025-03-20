@@ -25,7 +25,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                sh "docker run -d -p 80:80 hello-world-app:${env.BUILD_ID}"
+                sh "docker run -d -p 1000:80 hello-world-app:${env.BUILD_ID}"
             }
         }
     }
